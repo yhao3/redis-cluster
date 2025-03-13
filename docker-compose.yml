@@ -8,6 +8,8 @@ services:
       - "7000:7000"
       - "17000:17000"
     restart: always
+    volumes:
+      - redis-data-node1:/data
     entrypoint:
       [
         redis-server,
@@ -24,6 +26,8 @@ services:
       - "7001:7001"
       - "17001:17001"
     restart: always
+    volumes:
+      - redis-data-node2:/data
     entrypoint:
       [
         redis-server,
@@ -40,6 +44,8 @@ services:
       - "7002:7002"
       - "17002:17002"
     restart: always
+    volumes:
+      - redis-data-node3:/data
     entrypoint:
       [
         redis-server,
@@ -56,6 +62,8 @@ services:
       - "7003:7003"
       - "17003:17003"
     restart: always
+    volumes:
+      - redis-data-node4:/data
     entrypoint:
       [
         redis-server,
@@ -76,6 +84,8 @@ services:
       - "7004:7004"
       - "17004:17004"
     restart: always
+    volumes:
+      - redis-data-node5:/data
     entrypoint:
       [
         redis-server,
@@ -96,6 +106,8 @@ services:
       - "7005:7005"
       - "17005:17005"
     restart: always
+    volumes:
+      - redis-data-node6:/data
     entrypoint:
       [
         redis-server,
@@ -134,3 +146,9 @@ services:
 
 volumes:
   redis-webui-data: {}
+  redis-data-node1: {}
+  redis-data-node2: {}
+  redis-data-node3: {}
+  redis-data-node4: {}
+  redis-data-node5: {}
+  redis-data-node6: {}
